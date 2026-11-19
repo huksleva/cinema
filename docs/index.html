@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Как развернуть учебную конфигурацию 1С «Кинотеатр», оформить операции кинобара и работать с исходниками.">
+  <title>Кинотеатр — документация</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#overview">К содержанию</a>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <span>Документация проекта</span>
+      <a href="https://github.com/huksleva/cinema">Репозиторий на GitHub</a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav aria-label="Разделы документации">
+      <ul>
+        <li><a href="#overview">О проекте</a></li>
+        <li><a href="#start">Запуск</a></li>
+        <li><a href="#operations">Работа в 1С</a></li>
+        <li><a href="#demo">Демонстрация</a></li>
+        <li><a href="#development">Разработка</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="overview" class="intro">
+        <h1>Кинотеатр</h1>
+        <p class="summary">Учебная конфигурация 1С:Предприятие для учёта товаров кинобара. Она ведёт поступления, продажи и цены, контролирует остатки по организациям и формирует отчёты по остаткам и выручке.</p>
+        <a class="primary-link" href="#start">Перейти к запуску</a>
+      </section>
+
+      <section id="start">
+        <h2>Запуск из исходников</h2>
+        <p>Понадобятся Windows, Git, PowerShell 7 и 1С:Предприятие. Сборка проверена на учебной платформе <strong>8.3.27.1688</strong>.</p>
+        <pre><code>git clone https://github.com/huksleva/cinema.git
+Set-Location 'cinema\Кинотеатр'
+.\scripts\Build.ps1
+.\scripts\Test.ps1</code></pre>
+        <ol>
+          <li><code>Build.ps1</code> создаёт отдельную базу в <code>build/infobase</code>. <code>Test.ps1</code> добавляет демонстрационные данные и выполняет проверки.</li>
+          <li>В окне запуска 1С выберите <strong>Добавить</strong>, затем <strong>Добавление в список существующей информационной базы</strong>.</li>
+          <li>Укажите путь к каталогу <code>Кинотеатр/build/infobase</code> внутри клона и запустите <strong>1С:Предприятие</strong>.</li>
+        </ol>
+        <p>Если платформа установлена в нестандартном каталоге, передайте её путь обоим сценариям через параметр <code>-Platform</code>. <a href="https://github.com/huksleva/cinema/blob/main/Кинотеатр/scripts/README.md">Параметры сценариев</a></p>
+      </section>
+
+      <section id="operations">
+        <h2>Работа в 1С</h2>
+        <p>При обычном запуске открывается рабочее место кинобара. Доступ к командам зависит от роли пользователя.</p>
+
+        <h3>Подготовить товары и цены</h3>
+        <p>В справочниках заведите организацию, покупателя и товары. В карточке номенклатуры можно загрузить фотографию размером до 5 МБ. Сохраните карточку после загрузки. В разделе <strong>Цены</strong> укажите товар, период действия и положительную розничную цену.</p>
+
+        <h3>Оформить поступление</h3>
+        <p>Откройте <strong>Покупка → Приход</strong>, выберите организацию, добавьте товары, количество и закупочные цены. Проведите документ, чтобы увеличить остатки этой организации.</p>
+
+        <h3>Оформить продажу</h3>
+        <p>Откройте <strong>Продажа → Расход</strong>, выберите организацию и покупателя, затем добавьте товары и количество. Если оставить цену <code>0</code>, система подберёт действующую цену на дату документа. При нехватке товара проведение отклоняется.</p>
+
+        <h3>Посмотреть отчёты</h3>
+        <p>В отчёте <strong>Остатки</strong> отображаются текущие остатки. Отчёт <strong>Продажи</strong> показывает проданное количество и выручку за всё время. Нажмите <strong>Обновить отчёт</strong>, чтобы получить актуальные данные.</p>
+        <p><a href="https://github.com/huksleva/cinema/blob/main/Кинотеатр/Инструкция%20пользователя.md">Полная инструкция пользователя</a></p>
+      </section>
+
+      <section id="demo">
+        <h2>Демонстрация</h2>
+        <p>После запуска проверок откройте карточку попкорна с фотографией, затем проведённые документы прихода и продажи. Для исходных демонстрационных данных отчёты показывают следующие значения.</p>
+        <div class="table-wrap">
+          <table aria-label="Остатки и выручка в демонстрационной базе">
+            <thead>
+              <tr><th scope="col">Товар</th><th scope="col">Приход</th><th scope="col">Продажа</th><th scope="col">Остаток</th><th scope="col">Выручка</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Попкорн</th><td>100</td><td>3</td><td>97</td><td>750 ₽</td></tr>
+              <tr><th scope="row">Напиток</th><td>50</td><td>2</td><td>48</td><td>300 ₽</td></tr>
+            </tbody>
+            <tfoot>
+              <tr><th scope="row" colspan="4">Итого выручка</th><td>1 050 ₽</td></tr>
+            </tfoot>
+          </table>
+        </div>
+        <p>Для проверки контроля остатков попробуйте провести продажу с количеством больше доступного.</p>
+      </section>
+
+      <section id="development">
+        <h2>Разработка и проверка</h2>
+        <p>В каталоге <code>Кинотеатр/src</code> хранится выгрузка Конфигуратора с метаданными XML и модулями BSL. Для изменений создайте отдельную рабочую базу и ветку. После работы в Конфигураторе выгрузите конфигурацию в <code>src</code>, проверьте разницу и запустите сборку с тестами.</p>
+        <pre><code>.\scripts\Export.ps1 -Database 'D:\MyCinemaDev'
+git diff
+.\scripts\Build.ps1
+.\scripts\Test.ps1</code></pre>
+        <p>Тесты проверяют проведение документов, цены, остатки, отчёты и открытие основных форм. Журналы нового запуска появятся в <code>build/logs</code>.</p>
+        <ul class="resources">
+          <li><a href="https://github.com/huksleva/cinema/tree/main/Кинотеатр/src">Исходники конфигурации</a></li>
+          <li><a href="https://github.com/huksleva/cinema/blob/main/Кинотеатр/docs/Git.md">Рабочий процесс с Git</a></li>
+          <li><a href="https://github.com/huksleva/cinema/tree/main/Кинотеатр/tests">Результаты проверок</a></li>
+          <li><a href="https://github.com/huksleva/cinema/blob/main/Кинотеатр/docs/Документация.md">Документация проекта</a></li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
