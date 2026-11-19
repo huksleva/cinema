@@ -20,5 +20,11 @@
 				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="НачалоПериода" id="3">
+			<Type><v8:Type>xs:dateTime</v8:Type><v8:DateQualifiers><v8:DateFractions>DateTime</v8:DateFractions></v8:DateQualifiers></Type>
+		</Attribute>
+		<Attribute name="КонецПериода" id="4">
+			<Type><v8:Type>xs:dateTime</v8:Type><v8:DateQualifiers><v8:DateFractions>DateTime</v8:DateFractions></v8:DateQualifiers></Type>
+		</Attribute>
 	</Attributes>
 </Form>

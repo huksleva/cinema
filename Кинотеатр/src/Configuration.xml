@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
 	<Configuration uuid="1558a2bd-2f44-499f-b9ad-8423d07f4528">
 		<InternalInfo>
@@ -49,7 +49,7 @@
 			<ScriptVariant>Russian</ScriptVariant>
 			<DefaultRoles/>
 			<Vendor>Команда 1</Vendor>
-			<Version>1.1.0</Version>
+			<Version>1.2.2</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -232,7 +232,7 @@
 			<AllowedIncomingShareRequestTypes/>
 			<MainClientApplicationWindowMode>Normal</MainClientApplicationWindowMode>
 			<DefaultInterface/>
-			<DefaultStyle>Style.ГрафитИЯнтарь</DefaultStyle>
+			<DefaultStyle>Style.СтильКинотеатра</DefaultStyle>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -252,22 +252,45 @@
 			<Language>Русский</Language>
 			<Subsystem>Покупка</Subsystem>
 			<Subsystem>Продажа</Subsystem>
-			<Style>ГрафитИЯнтарь</Style>
+			<Style>СтильКинотеатра</Style>
+			<CommonPicture>ИконкаПродажи</CommonPicture>
+			<CommonPicture>ИконкаПокупки</CommonPicture>
+			<CommonPicture>Главное</CommonPicture>
 			<Role>Покупка</Role>
 			<Role>Продажа</Role>
 			<Role>ПолныеПрава</Role>
 			<CommonModule>КинотеатрСервер</CommonModule>
-			<CommonForm>РабочееМесто</CommonForm>
+			<CommonModule>УправлениеБронью</CommonModule>
+			<CommonModule>УправлениеБилетами</CommonModule>
+			<CommonModule>ОсвобождениеБрони</CommonModule>
+			<ScheduledJob>СнятиеПросроченныхБроней</ScheduledJob>
+			<ScheduledJob>ОсвобождениеБрониБилетов</ScheduledJob>
 			<Catalog>Номенклатура</Catalog>
+			<Catalog>ЕдиницыИзмерения</Catalog>
 			<Catalog>Покупатели</Catalog>
 			<Catalog>Организации</Catalog>
+			<Catalog>Фильмы</Catalog>
+			<Catalog>Залы</Catalog>
+			<Catalog>Места</Catalog>
+			<Catalog>Сеансы</Catalog>
 			<Document>Приход</Document>
 			<Document>Расход</Document>
+			<Document>Бронирование</Document>
+			<Document>ПродажаБилета</Document>
+			<Document>БронированиеБилета</Document>
+			<Document>ВозвратБилета</Document>
 			<Report>Остатки</Report>
 			<Report>Продажи</Report>
+			<Report>ДоступностьТоваров</Report>
+			<Report>СостояниеМест</Report>
+			<DataProcessor>РабочееМестоКассира</DataProcessor>
+			<DataProcessor>РабочееМестоЗакупщика</DataProcessor>
+			<DataProcessor>ПанельУправления</DataProcessor>
 			<InformationRegister>Цены</InformationRegister>
+			<InformationRegister>Билеты</InformationRegister>
 			<AccumulationRegister>ОстаткиТоваров</AccumulationRegister>
 			<AccumulationRegister>Продажи</AccumulationRegister>
+			<AccumulationRegister>РезервыТоваров</AccumulationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

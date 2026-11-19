@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="Декорация1" id="1">
+			<TextColor>#0E4733</TextColor>
+			<Font ref="style:NormalTextFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КИНОТЕАТР ПРЕМЬЕРА — УПРАВЛЕНИЕ ЗАКУПКАМИ</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<ContextMenu name="Декорация1КонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="3"/>
+		</LabelDecoration>
+		<Button name="НазадВМеню" id="35">
+			<Type>UsualButton</Type>
+			<Height>2</Height>
+			<CommandName>Form.Command.НазадВМеню</CommandName>
+			<TextColor>#FFFFFF</TextColor>
+			<BackColor>#3C3C46</BackColor>
+			<Font ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<ExtendedTooltip name="НазадВМенюРасширеннаяПодсказка" id="36"/>
+		</Button>
+		<UsualGroup name="ГруппаОсновная" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновнаяРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПоставки" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оформление поставок на склад</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа поставки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГруппаПоставкиРасширеннаяПодсказка" id="7"/>
+					<ChildItems>
+						<Button name="ПоставкаПопкорна" id="8">
+							<Type>UsualButton</Type>
+							<Width>22</Width>
+							<Height>4</Height>
+							<CommandName>Form.Command.ПоставкаПопкорна</CommandName>
+							<TextColor>#FFFFFF</TextColor>
+							<BackColor>#7A1E43</BackColor>
+							<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Закупка попкорна
++100 шт</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ПоставкаПопкорнаРасширеннаяПодсказка" id="9"/>
+						</Button>
+						<Button name="ПоставкаНапитков" id="10">
+							<Type>UsualButton</Type>
+							<Width>22</Width>
+							<Height>4</Height>
+							<CommandName>Form.Command.ПоставкаНапитков</CommandName>
+							<TextColor>#FFFFFF</TextColor>
+							<BackColor>#0E4733</BackColor>
+							<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Закупка напитков
++100 шт</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ПоставкаНапитковРасширеннаяПодсказка" id="11"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСклад" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущие остатки на складе</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа склад</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГруппаСкладРасширеннаяПодсказка" id="13"/>
+					<ChildItems>
+						<Button name="ОбновитьОстатки" id="14">
+							<Type>UsualButton</Type>
+							<Height>2</Height>
+							<CommandName>Form.Command.ОбновитьОстатки</CommandName>
+							<BackColor>#2EE59D</BackColor>
+							<Font ref="style:NormalTextFont" faceName="Arial" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<ExtendedTooltip name="ОбновитьОстаткиРасширеннаяПодсказка" id="15"/>
+						</Button>
+						<Table name="ОстаткиСклада" id="16">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ОстаткиСклада</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ОстаткиСкладаКонтекстноеМеню" id="17"/>
+							<AutoCommandBar name="ОстаткиСкладаКоманднаяПанель" id="18"/>
+							<ExtendedTooltip name="ОстаткиСкладаРасширеннаяПодсказка" id="19"/>
+							<SearchStringAddition name="ОстаткиСкладаСтрокаПоиска" id="20">
+								<AdditionSource>
+									<Item>ОстаткиСклада</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОстаткиСкладаСтрокаПоискаКонтекстноеМеню" id="21"/>
+								<ExtendedTooltip name="ОстаткиСкладаСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОстаткиСкладаСостояниеПросмотра" id="23">
+								<AdditionSource>
+									<Item>ОстаткиСклада</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОстаткиСкладаСостояниеПросмотраКонтекстноеМеню" id="24"/>
+								<ExtendedTooltip name="ОстаткиСкладаСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОстаткиСкладаУправлениеПоиском" id="26">
+								<AdditionSource>
+									<Item>ОстаткиСклада</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОстаткиСкладаУправлениеПоискомКонтекстноеМеню" id="27"/>
+								<ExtendedTooltip name="ОстаткиСкладаУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ОстаткиСкладаНоменклатура" id="29">
+									<DataPath>ОстаткиСклада.Номенклатура</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ОстаткиСкладаНоменклатураКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="ОстаткиСкладаНоменклатураРасширеннаяПодсказка" id="31"/>
+								</InputField>
+								<InputField name="ОстаткиСкладаКоличество" id="32">
+									<DataPath>ОстаткиСклада.Количество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ОстаткиСкладаКоличествоКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ОстаткиСкладаКоличествоРасширеннаяПодсказка" id="34"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.РабочееМестоЗакупщика</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ОстаткиСклада" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остатки склада</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Номенклатура" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Количество" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПоставкаПопкорна" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поставка попкорна (+100 шт)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поставка попкорна</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоставкаПопкорна</Action>
+		</Command>
+		<Command name="ПоставкаНапитков" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поставка напитков (+100 шт)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поставка напитков</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоставкаНапитков</Action>
+		</Command>
+		<Command name="ОбновитьОстатки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить остатки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить остатки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьОстатки</Action>
+		</Command>
+		<Command name="НазадВМеню" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад в меню</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад в меню</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НазадВМеню</Action>
+		</Command>
+	</Commands>
+</Form>

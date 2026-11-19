@@ -15,6 +15,6 @@ foreach ($kind in @('SelfTest','Smoke')) {
     $results = Get-Content -LiteralPath $resultPath
     $results | Write-Output
     if ($results -match '^FAIL') { throw 'Тесты обнаружили ошибку' }
-    $expected = if ($kind -eq 'SelfTest') { 14 } else { 7 }
+    $expected = if ($kind -eq 'SelfTest') { 14 } else { 8 }
     if (@($results | Where-Object { $_ -like 'PASS *' }).Count -ne $expected) { throw 'Неверное число завершенных проверок' }
 }

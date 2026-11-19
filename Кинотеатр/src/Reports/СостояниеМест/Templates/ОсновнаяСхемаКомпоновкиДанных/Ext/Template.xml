@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цена</dataPath>
+			<field>Цена</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сеанс</dataPath>
+			<field>Сеанс</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Место</dataPath>
+			<field>Место</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Статус</dataPath>
+			<field>Статус</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДействуетДо</dataPath>
+			<field>ДействуетДо</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+    Сеансы.Ссылка КАК Сеанс,
+    Места.Ссылка КАК Место,
+
+    ВЫБОР
+        КОГДА ЕСТЬNULL(ПроданныеМеста.Количество, 0) &gt; 0
+            ТОГДА "Продано"
+        КОГДА ЕСТЬNULL(АктивныеБрони.Количество, 0) &gt; 0
+            ТОГДА "Забронировано"
+        ИНАЧЕ "Свободно"
+    КОНЕЦ КАК Статус,
+
+    ВЫБОР
+        КОГДА ЕСТЬNULL(ПроданныеМеста.Количество, 0) &gt; 0
+            ТОГДА ЕСТЬNULL(ПроданныеМеста.Цена, 0)
+        ИНАЧЕ 0
+    КОНЕЦ КАК Цена,
+
+    АктивныеБрони.ДействуетДо КАК ДействуетДо
+
+ИЗ
+    Справочник.Сеансы КАК Сеансы
+
+        ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Места КАК Места
+        ПО Сеансы.Зал = Места.Зал
+
+        ЛЕВОЕ СОЕДИНЕНИЕ
+        (
+            ВЫБРАТЬ
+                Билеты.Сеанс КАК Сеанс,
+                Билеты.Место КАК Место,
+                КОЛИЧЕСТВО(РАЗЛИЧНЫЕ Билеты.Регистратор) КАК Количество,
+                МАКСИМУМ(Билеты.Цена) КАК Цена
+            ИЗ
+                РегистрСведений.Билеты КАК Билеты
+
+                    ЛЕВОЕ СОЕДИНЕНИЕ Документ.ВозвратБилета КАК Возвраты
+                    ПО Возвраты.Продажа = Билеты.Регистратор
+                        И Возвраты.Проведен
+
+            ГДЕ
+                Билеты.Статус = "Продано"
+                И Возвраты.Ссылка ЕСТЬ NULL
+
+            СГРУППИРОВАТЬ ПО
+                Билеты.Сеанс,
+                Билеты.Место
+
+        ) КАК ПроданныеМеста
+
+        ПО ПроданныеМеста.Сеанс = Сеансы.Ссылка
+            И ПроданныеМеста.Место = Места.Ссылка
+
+        ЛЕВОЕ СОЕДИНЕНИЕ
+        (
+            ВЫБРАТЬ
+                Билеты.Сеанс КАК Сеанс,
+                Билеты.Место КАК Место,
+                КОЛИЧЕСТВО(РАЗЛИЧНЫЕ Билеты.Регистратор) КАК Количество,
+                МАКСИМУМ(Билеты.ДействуетДо) КАК ДействуетДо
+
+            ИЗ
+                РегистрСведений.Билеты КАК Билеты
+
+                    ЛЕВОЕ СОЕДИНЕНИЕ Документ.ПродажаБилета КАК Продажи
+                    ПО Продажи.Бронь = Билеты.Регистратор
+                        И Продажи.Проведен
+
+            ГДЕ
+                Билеты.Статус = "Забронировано"
+                И Билеты.ДействуетДо &gt; &amp;ТекущаяДата
+                И Продажи.Ссылка ЕСТЬ NULL
+
+            СГРУППИРОВАТЬ ПО
+                Билеты.Сеанс,
+                Билеты.Место
+
+        ) КАК АктивныеБрони
+
+        ПО АктивныеБрони.Сеанс = Сеансы.Ссылка
+            И АктивныеБрони.Место = Места.Ссылка
+
+ГДЕ
+    НЕ Сеансы.ПометкаУдаления
+    И НЕ Места.ПометкаУдаления</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>Количество</dataPath>
+		<expression>1</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество мест</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>Количество</dataPath>
+		<expression>Сумма(Количество)</expression>
+	</totalField>
+	<parameter>
+		<name>ТекущаяДата</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущая дата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>ТекущаяДата()</expression>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сеанс</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Место</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Статус</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Цена</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДействуетДо</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Статус</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

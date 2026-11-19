@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<CommandBarLocation>None</CommandBarLocation>
+	<ShowTitle>false</ShowTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<HTMLDocumentField name="ПолеHTML" id="50">
+			<DataPath>ПолеHTML</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<ContextMenu name="ПолеHTMLКонтекстноеМеню" id="51"/>
+			<ExtendedTooltip name="ПолеHTMLРасширеннаяПодсказка" id="52"/>
+			<Events>
+				<Event name="OnClick">ПолеHTMLПриНажатии</Event>
+			</Events>
+		</HTMLDocumentField>
+		<LabelDecoration name="Декорация1" id="45">
+			<Visible>false</Visible>
+			<TextColor>#1C980A</TextColor>
+			<Font ref="style:NormalTextFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КИНОТЕАТР ПРЕМЬЕРА — КАССА БАРА</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<ContextMenu name="Декорация1КонтекстноеМеню" id="46"/>
+			<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="47"/>
+		</LabelDecoration>
+		<Button name="НазадВМеню" id="48">
+			<Type>UsualButton</Type>
+			<Visible>false</Visible>
+			<Height>2</Height>
+			<CommandName>Form.Command.НазадВМеню</CommandName>
+			<TextColor>#FFFFFF</TextColor>
+			<BackColor>#3C3C46</BackColor>
+			<Font ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<ExtendedTooltip name="НазадВМенюРасширеннаяПодсказка" id="49"/>
+		</Button>
+		<UsualGroup name="ГруппаОсновная" id="1">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновнаяРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаТовары" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Меню кинобара</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа товары</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГруппаТоварыРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<Button name="КупитьПопкорн" id="5">
+							<Type>UsualButton</Type>
+							<Width>25</Width>
+							<Height>5</Height>
+							<CommandName>Form.Command.КупитьПопкорн</CommandName>
+							<TextColor>#2EE59D</TextColor>
+							<BackColor>#7A1E43</BackColor>
+							<Font ref="style:SmallTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Попкорн соленый</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КупитьПопкорнРасширеннаяПодсказка" id="6"/>
+						</Button>
+						<Button name="КупитьНапиток" id="7">
+							<Type>UsualButton</Type>
+							<Width>25</Width>
+							<Height>5</Height>
+							<CommandName>Form.Command.КупитьНапиток</CommandName>
+							<TextColor>#2EE59D</TextColor>
+							<BackColor>#0E4733</BackColor>
+							<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Напиток 0,5 л</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КупитьНапитокРасширеннаяПодсказка" id="8"/>
+						</Button>
+						<Button name="ОчиститьЧек" id="43">
+							<Type>UsualButton</Type>
+							<Height>2</Height>
+							<CommandName>Form.Command.ОчиститьЧек</CommandName>
+							<TextColor>#FFFFFF</TextColor>
+							<BackColor>#643232</BackColor>
+							<Font ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Очистить заказ</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ОчиститьЧекРасширеннаяПодсказка" id="44"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПравая" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущий чек</v8:content>
+						</v8:item>
+					</Title>
+					<TitleTextColor>#2D891A</TitleTextColor>
+					<TitleFont ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа правая</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="35"/>
+					<ChildItems>
+						<Table name="Чек" id="9">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<Width>35</Width>
+							<Height>8</Height>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Чек</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЧекКонтекстноеМеню" id="10"/>
+							<AutoCommandBar name="ЧекКоманднаяПанель" id="11"/>
+							<ExtendedTooltip name="ЧекРасширеннаяПодсказка" id="12"/>
+							<SearchStringAddition name="ЧекСтрокаПоиска" id="13">
+								<AdditionSource>
+									<Item>Чек</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЧекСтрокаПоискаКонтекстноеМеню" id="14"/>
+								<ExtendedTooltip name="ЧекСтрокаПоискаРасширеннаяПодсказка" id="15"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЧекСостояниеПросмотра" id="16">
+								<AdditionSource>
+									<Item>Чек</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЧекСостояниеПросмотраКонтекстноеМеню" id="17"/>
+								<ExtendedTooltip name="ЧекСостояниеПросмотраРасширеннаяПодсказка" id="18"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЧекУправлениеПоиском" id="19">
+								<AdditionSource>
+									<Item>Чек</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЧекУправлениеПоискомКонтекстноеМеню" id="20"/>
+								<ExtendedTooltip name="ЧекУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ЧекНоменклатура" id="22">
+									<DataPath>Чек.Номенклатура</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ЧекНоменклатураКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="ЧекНоменклатураРасширеннаяПодсказка" id="24"/>
+								</InputField>
+								<InputField name="ЧекКоличество" id="25">
+									<DataPath>Чек.Количество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ЧекКоличествоКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="ЧекКоличествоРасширеннаяПодсказка" id="27"/>
+								</InputField>
+								<InputField name="ЧекЦена" id="28">
+									<DataPath>Чек.Цена</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ЧекЦенаКонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="ЧекЦенаРасширеннаяПодсказка" id="30"/>
+								</InputField>
+								<InputField name="ЧекСумма" id="31">
+									<DataPath>Чек.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ЧекСуммаКонтекстноеМеню" id="32"/>
+									<ExtendedTooltip name="ЧекСуммаРасширеннаяПодсказка" id="33"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<LabelField name="ИтоговаяСумма" id="36">
+							<DataPath>ИтоговаяСумма</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ИТОГО</v8:content>
+								</v8:item>
+							</Title>
+							<TextColor>#2EE59D</TextColor>
+							<Font ref="style:NormalTextFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<ContextMenu name="ИтоговаяСуммаКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="ИтоговаяСуммаРасширеннаяПодсказка" id="38"/>
+						</LabelField>
+						<Button name="ОплатаКартой" id="39">
+							<Type>UsualButton</Type>
+							<Height>2</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<CommandName>Form.Command.ОплатаКартой</CommandName>
+							<TextColor>#000000</TextColor>
+							<BackColor>#2EE59D</BackColor>
+							<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<ExtendedTooltip name="ОплатаКартойРасширеннаяПодсказка" id="40"/>
+						</Button>
+						<Button name="ОплатаНаличными" id="41">
+							<Type>UsualButton</Type>
+							<Height>2</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<CommandName>Form.Command.ОплатаНаличными</CommandName>
+							<TextColor>#000000</TextColor>
+							<BackColor>#2EE59D</BackColor>
+							<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<ExtendedTooltip name="ОплатаНаличнымиРасширеннаяПодсказка" id="42"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.РабочееМестоКассира</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Чек" id="2">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Номенклатура" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Количество" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Цена" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИтоговаяСумма" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итоговая сумма</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПолеHTML" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле HTML</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимКассы" id="5">
+			<Title><v8:item><v8:lang>ru</v8:lang><v8:content>Режим кассы</v8:content></v8:item></Title>
+			<Type><v8:Type>xs:string</v8:Type><v8:StringQualifiers><v8:Length>10</v8:Length><v8:AllowedLength>Variable</v8:AllowedLength></v8:StringQualifiers></Type>
+		</Attribute>	</Attributes>
+	<Commands>
+		<Command name="КупитьПопкорн" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Попкорн соленый большой</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Купить попкорн</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КупитьПопкорн</Action>
+		</Command>
+		<Command name="КупитьНапиток" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Напиток 0,5 л</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Купить напиток</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КупитьНапиток</Action>
+		</Command>
+		<Command name="ОчиститьЧек" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить чек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить чек</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьЧек</Action>
+		</Command>
+		<Command name="ОплатаКартой" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплата картой</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплата картой</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОплатаКартой</Action>
+		</Command>
+		<Command name="ОплатаНаличными" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наличные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплата наличными</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОплатаНаличными</Action>
+		</Command>
+		<Command name="НазадВМеню" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад в меню</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад в меню</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НазадВМеню</Action>
+		</Command>
+	</Commands>
+</Form>
+
+

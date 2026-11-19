@@ -1,2 +1,6 @@
 @echo off
-start "" "C:\Program Files (x86)\1cv8t\8.3.27.1688\bin\1cv8t.exe" DESIGNER /F "%~dp0infobase"
+setlocal
+pwsh -NoProfile -File "%~dp0scripts\Open.ps1" Designer
+set "RESULT=%ERRORLEVEL%"
+if not "%RESULT%"=="0" pause
+exit /b %RESULT%
