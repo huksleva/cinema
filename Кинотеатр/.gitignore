@@ -1,0 +1,17 @@
+infobase/
+build/
+*.1CD
+*.1CL
+*.cfl
+*.cf
+*.dt
+*.log
+~$*
+Thumbs.db
+.DS_Store
+docs/*.docx
+docs/*.pptx
+docs/*.pdf
+/Кинотеатр_комплект.zip
+
+backups/

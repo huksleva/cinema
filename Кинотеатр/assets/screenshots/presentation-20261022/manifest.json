@@ -1,0 +1,109 @@
+{
+  "capturedAt": "2026-10-22",
+  "infobase": "C:/Leo/projects/Кинотеатр/infobase",
+  "configurationVersion": "1.0.0",
+  "style": "СтильКинотеатра",
+  "captureMethod": "Alt+PrintScreen в реальном окне 1С; PNG из буфера обмена",
+  "sourceImagesUnmodified": true,
+  "images": [
+    {
+      "file": "11-dashboard-current.png",
+      "sha256": "515900383567580290ca983abad98ae7ad4f0a72d9fd8ffc63317855161c7292",
+      "slide": 1,
+      "crop": {
+        "left": 0.005,
+        "top": 0.245,
+        "right": 0.005,
+        "bottom": 0.18
+      }
+    },
+    {
+      "file": "04-product.png",
+      "sha256": "2ed94e080cabd37414ec7786aad6e3aaaacac61ac000e7c6db2311babf9ce5f2",
+      "slide": 3,
+      "crop": {
+        "left": 0,
+        "top": 0.215,
+        "right": 0.625,
+        "bottom": 0.065
+      }
+    },
+    {
+      "file": "05-receipt.png",
+      "sha256": "60917147e3237ee077a81f177be14aaf849c9f7752d62bc34f6aed541545a5e1",
+      "slide": 4,
+      "crop": {
+        "left": 0.004,
+        "top": 0.245,
+        "right": 0.01,
+        "bottom": 0.15
+      }
+    },
+    {
+      "file": "10-cashier-1050.png",
+      "sha256": "f6fdbbe53403158231b38e10cfdc04face301ef14f37b2c0d7a814e059959cfc",
+      "slide": 5,
+      "crop": {
+        "left": 0.004,
+        "top": 0.245,
+        "right": 0.008,
+        "bottom": 0.035
+      }
+    },
+    {
+      "file": "06-sale.png",
+      "sha256": "25e119c5c6fccfc535c78f6b6fc0e549bf80523d1e37e150d958b4a46a15a699",
+      "slide": 6,
+      "crop": {
+        "left": 0.004,
+        "top": 0.245,
+        "right": 0.01,
+        "bottom": 0.08
+      }
+    },
+    {
+      "file": "08-stock-report.png",
+      "sha256": "b3c1eb8ba5161db33d3fb21b7aca80c33ca9a6c5d76b9041cf67114ecfaed134",
+      "slide": 7,
+      "crop": {
+        "left": 0.01,
+        "top": 0.45,
+        "right": 0.344,
+        "bottom": 0.4
+      }
+    },
+    {
+      "file": "07-sales-report.png",
+      "sha256": "ccaa730f5f1186c4a23c1d0aac09911ec1af8898964c125a220ee68039d6cc34",
+      "slide": 7,
+      "crop": {
+        "left": 0.01,
+        "top": 0.45,
+        "right": 0.135,
+        "bottom": 0.4
+      }
+    }
+  ],
+  "exampleSale": {
+    "popcorn": {
+      "quantity": 3,
+      "price": 250
+    },
+    "drink": {
+      "quantity": 2,
+      "price": 150
+    },
+    "total": 1050
+  },
+  "currentReports": {
+    "stock": {
+      "popcorn": 490,
+      "drink": 239
+    },
+    "revenue": {
+      "popcorn": 2500,
+      "drink": 1650,
+      "total": 4150
+    }
+  }
+}
