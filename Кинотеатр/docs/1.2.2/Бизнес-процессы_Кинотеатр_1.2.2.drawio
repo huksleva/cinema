@@ -1,0 +1,629 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" compressed="false">
+  <diagram id="p1" name="Поставка товаров в кинобар">
+    <mxGraphModel grid="0" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="848" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="project" vertex="1" parent="1" value="1С:Предприятие 8.3  /  Кинотеатр 1.2.2" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=16;fontColor=#435C6B;fontStyle=1;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="29" width="650" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="topic" vertex="1" parent="1" value="Бизнес-процессы" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=16;fontColor=#435C6B;fontStyle=0;align=right;verticalAlign=middle;">
+          <mxGeometry x="940" y="29" width="218" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="title" vertex="1" parent="1" value="Поставка товаров в кинобар" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=37;fontColor=#142835;fontStyle=1;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="59" width="1116" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="intro" vertex="1" parent="1" value="Сценарий быстрой поставки из рабочего места закупщика." style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=19;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="111" width="1116" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" vertex="1" parent="1" value="Закупщик" style="swimlane;startSize=43;horizontal=1;rounded=0;spacingLeft=20;strokeColor=#C8D7DB;fillColor=#E8EFF2;swimlaneFillColor=#F8FAFB;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=1;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="160" width="316" height="616" as="geometry" />
+        </mxCell>
+        <mxCell id="system" vertex="1" parent="1" value="Учётная система 1С" style="swimlane;startSize=43;horizontal=1;rounded=0;spacingLeft=20;strokeColor=#C8D7DB;fillColor=#DFEEF0;swimlaneFillColor=#F1F7F8;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=1;align=left;verticalAlign=middle;">
+          <mxGeometry x="358" y="160" width="800" height="616" as="geometry" />
+        </mxCell>
+        <mxCell id="start" vertex="1" parent="actor" value="Нужна поставка" style="rounded=1;arcSize=50;fillColor=#ECF3F5;strokeColor=#6F919D;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#234552;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="56.0" y="58.0" width="204" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="select" vertex="1" parent="actor" value="Выбрать поставку&lt;br&gt;попкорна или напитка" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="31.0" y="120.0" width="254" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="prepare" vertex="1" parent="system" value="Сформировать «Приход»&lt;br&gt;на 100 единиц товара" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="150.0" y="120.0" width="284" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="post" vertex="1" parent="system" value="Проверить реквизиты&lt;br&gt;и провести «Приход»" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="150.0" y="219.0" width="284" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="check" vertex="1" parent="system" value="«Приход»&lt;br&gt;проведён?" style="rhombus;fillColor=#E5F0F4;strokeColor=#47798A;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=16;fontColor=#142835;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="185.0" y="316.0" width="214" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="success" vertex="1" parent="system" value="Обновить остатки в форме&lt;br&gt;и подтвердить поставку" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="135.0" y="438.0" width="314" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="done" vertex="1" parent="system" value="Поставка учтена" style="rounded=1;arcSize=50;fillColor=#DDF3EB;strokeColor=#498974;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#19483C;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="174.0" y="547.0" width="236" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="error" vertex="1" parent="system" value="Сообщить причину&lt;br&gt;отказа" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="548.0" y="330.0" width="208" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="rejected" vertex="1" parent="system" value="Поставка не учтена" style="rounded=1;arcSize=50;fillColor=#FCEFEA;strokeColor=#B16550;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#803C29;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="534.0" y="453.0" width="236" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" edge="1" parent="1" source="start" target="select" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" edge="1" parent="1" source="select" target="prepare" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" edge="1" parent="1" source="prepare" target="post" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="post" target="check" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="check" target="success" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="route5" vertex="1" parent="1" value="Да" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=14;fontColor=#435C6B;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="604" y="575" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" edge="1" parent="1" source="check" target="error" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="route6" vertex="1" parent="1" value="Нет" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=14;fontColor=#435C6B;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="751" y="498" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" edge="1" parent="1" source="success" target="done" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" edge="1" parent="1" source="error" target="rejected" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note" vertex="1" parent="1" value="Проведённый «Приход» увеличивает количество в регистре «Остатки товаров»." style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="783" width="1116" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="footer-line" vertex="1" parent="1" value="" style="strokeColor=none;fillColor=#C8D7DB;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="42" y="812" width="1116" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-icon0" vertex="1" parent="1" value="" style="rounded=1;arcSize=50;strokeColor=#6F919D;fillColor=#ECF3F5;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="42" y="824" width="25" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-label0" vertex="1" parent="1" value="Начало / результат" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=13;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="77" y="821" width="145" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-icon1" vertex="1" parent="1" value="" style="rounded=1;arcSize=50;strokeColor=#6D8C98;fillColor=#FFFFFF;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="237" y="824" width="20" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-label1" vertex="1" parent="1" value="Действие" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=13;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="267" y="821" width="145" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-icon2" vertex="1" parent="1" value="" style="rhombus;strokeColor=#47798A;fillColor=#E5F0F4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="358" y="824" width="22" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-label2" vertex="1" parent="1" value="Условие" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=13;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="390" y="821" width="145" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="page" vertex="1" parent="1" value="1 / 5" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=13;fontColor=#435C6B;fontStyle=0;align=right;verticalAlign=middle;">
+          <mxGeometry x="1058" y="821" width="100" height="18" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="p2" name="Продажа товаров в кинобаре">
+    <mxGraphModel grid="0" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="848" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="project" vertex="1" parent="1" value="1С:Предприятие 8.3  /  Кинотеатр 1.2.2" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=16;fontColor=#435C6B;fontStyle=1;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="29" width="650" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="topic" vertex="1" parent="1" value="Бизнес-процессы" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=16;fontColor=#435C6B;fontStyle=0;align=right;verticalAlign=middle;">
+          <mxGeometry x="940" y="29" width="218" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="title" vertex="1" parent="1" value="Продажа товаров в кинобаре" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=37;fontColor=#142835;fontStyle=1;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="59" width="1116" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="intro" vertex="1" parent="1" value="Кассир оформляет прямую продажу из корзины." style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=19;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="111" width="1116" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" vertex="1" parent="1" value="Кассир" style="swimlane;startSize=43;horizontal=1;rounded=0;spacingLeft=20;strokeColor=#C8D7DB;fillColor=#E8EFF2;swimlaneFillColor=#F8FAFB;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=1;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="160" width="316" height="616" as="geometry" />
+        </mxCell>
+        <mxCell id="system" vertex="1" parent="1" value="Учётная система 1С" style="swimlane;startSize=43;horizontal=1;rounded=0;spacingLeft=20;strokeColor=#C8D7DB;fillColor=#DFEEF0;swimlaneFillColor=#F1F7F8;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=1;align=left;verticalAlign=middle;">
+          <mxGeometry x="358" y="160" width="800" height="616" as="geometry" />
+        </mxCell>
+        <mxCell id="start" vertex="1" parent="actor" value="Заказ покупателя" style="rounded=1;arcSize=50;fillColor=#ECF3F5;strokeColor=#6F919D;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#234552;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="56.0" y="58.0" width="204" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="select" vertex="1" parent="actor" value="Добавить товары&lt;br&gt;и указать количество" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="31.0" y="120.0" width="254" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="pay" vertex="1" parent="actor" value="Выбрать способ оплаты&lt;br&gt;(наличные или карта)" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="31.0" y="219.0" width="254" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="prepare" vertex="1" parent="system" value="Получить актуальные цены&lt;br&gt;и проверить свободный остаток" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="135.0" y="219.0" width="314" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="check" vertex="1" parent="system" value="Цены заданы&lt;br&gt;и товара хватает?" style="rhombus;fillColor=#E5F0F4;strokeColor=#47798A;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=16;fontColor=#142835;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="172.0" y="316.0" width="240" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="success" vertex="1" parent="system" value="Провести «Расход», списать товар&lt;br&gt;и записать выручку" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="135.0" y="438.0" width="314" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="done" vertex="1" parent="system" value="Продажа учтена" style="rounded=1;arcSize=50;fillColor=#DDF3EB;strokeColor=#498974;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#19483C;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="174.0" y="547.0" width="236" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="error" vertex="1" parent="system" value="Сообщить причину&lt;br&gt;отказа" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="548.0" y="330.0" width="208" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="rejected" vertex="1" parent="system" value="Продажа не оформлена" style="rounded=1;arcSize=50;fillColor=#FCEFEA;strokeColor=#B16550;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#803C29;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="534.0" y="453.0" width="236" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" edge="1" parent="1" source="start" target="select" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" edge="1" parent="1" source="select" target="pay" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" edge="1" parent="1" source="pay" target="prepare" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="prepare" target="check" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="check" target="success" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="route5" vertex="1" parent="1" value="Да" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=14;fontColor=#435C6B;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="604" y="575" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" edge="1" parent="1" source="check" target="error" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="route6" vertex="1" parent="1" value="Нет" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=14;fontColor=#435C6B;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="751" y="498" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" edge="1" parent="1" source="success" target="done" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" edge="1" parent="1" source="error" target="rejected" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note" vertex="1" parent="1" value="Свободное количество = складской остаток − количество в резерве." style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="783" width="1116" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="footer-line" vertex="1" parent="1" value="" style="strokeColor=none;fillColor=#C8D7DB;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="42" y="812" width="1116" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-icon0" vertex="1" parent="1" value="" style="rounded=1;arcSize=50;strokeColor=#6F919D;fillColor=#ECF3F5;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="42" y="824" width="25" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-label0" vertex="1" parent="1" value="Начало / результат" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=13;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="77" y="821" width="145" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-icon1" vertex="1" parent="1" value="" style="rounded=1;arcSize=50;strokeColor=#6D8C98;fillColor=#FFFFFF;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="237" y="824" width="20" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-label1" vertex="1" parent="1" value="Действие" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=13;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="267" y="821" width="145" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-icon2" vertex="1" parent="1" value="" style="rhombus;strokeColor=#47798A;fillColor=#E5F0F4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="358" y="824" width="22" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-label2" vertex="1" parent="1" value="Условие" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=13;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="390" y="821" width="145" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="page" vertex="1" parent="1" value="2 / 5" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=13;fontColor=#435C6B;fontStyle=0;align=right;verticalAlign=middle;">
+          <mxGeometry x="1058" y="821" width="100" height="18" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="p3" name="Резерв товаров кинобара">
+    <mxGraphModel grid="0" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="848" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="project" vertex="1" parent="1" value="1С:Предприятие 8.3  /  Кинотеатр 1.2.2" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=16;fontColor=#435C6B;fontStyle=1;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="29" width="650" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="topic" vertex="1" parent="1" value="Бизнес-процессы" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=16;fontColor=#435C6B;fontStyle=0;align=right;verticalAlign=middle;">
+          <mxGeometry x="940" y="29" width="218" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="title" vertex="1" parent="1" value="Резерв товаров кинобара" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=37;fontColor=#142835;fontStyle=1;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="59" width="1116" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="intro" vertex="1" parent="1" value="Как товар резервируется и что происходит с бронью дальше." style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=19;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="111" width="1116" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" vertex="1" parent="1" value="Кассир" style="swimlane;startSize=43;horizontal=1;rounded=0;spacingLeft=20;strokeColor=#C8D7DB;fillColor=#E8EFF2;swimlaneFillColor=#F8FAFB;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=1;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="160" width="316" height="616" as="geometry" />
+        </mxCell>
+        <mxCell id="system" vertex="1" parent="1" value="Учётная система 1С" style="swimlane;startSize=43;horizontal=1;rounded=0;spacingLeft=20;strokeColor=#C8D7DB;fillColor=#DFEEF0;swimlaneFillColor=#F1F7F8;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=1;align=left;verticalAlign=middle;">
+          <mxGeometry x="358" y="160" width="800" height="616" as="geometry" />
+        </mxCell>
+        <mxCell id="start" vertex="1" parent="actor" value="Запрос на бронь" style="rounded=1;arcSize=50;fillColor=#ECF3F5;strokeColor=#6F919D;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#234552;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="56.0" y="54.0" width="204" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="input" vertex="1" parent="actor" value="Заполнить «Бронирование»&lt;br&gt;и указать срок брони" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="31.0" y="111.0" width="254" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="validate" vertex="1" parent="system" value="Получить цены. Проверить состав,&lt;br&gt;срок и свободный остаток" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="230.0" y="111.0" width="334" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="check" vertex="1" parent="system" value="Данные верны&lt;br&gt;и товар доступен?" style="rhombus;fillColor=#E5F0F4;strokeColor=#47798A;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=16;fontColor=#142835;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="276.0" y="195.0" width="242" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="fail" vertex="1" parent="system" value="Бронь не оформлена" style="rounded=1;arcSize=50;fillColor=#FCEFEA;strokeColor=#B16550;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#803C29;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="582.0" y="219.0" width="200" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="book" vertex="1" parent="system" value="Провести «Бронирование»&lt;br&gt;и увеличить резерв" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="255.0" y="300.0" width="284" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="choice" vertex="1" parent="system" value="Как закрывается&lt;br&gt;бронь?" style="rhombus;fillColor=#E5F0F4;strokeColor=#47798A;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=16;fontColor=#142835;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="286.0" y="374.0" width="222" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="branch0" vertex="1" parent="system" value="Провести «Расход» по брони,&lt;br&gt;списать товар и резерв" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=16;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="12.5" y="477.0" width="239" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="branch1" vertex="1" parent="system" value="Снять проведение&lt;br&gt;и убрать резерв" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=16;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="277.5" y="477.0" width="239" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="branch2" vertex="1" parent="system" value="Убрать резерв&lt;br&gt;регламентным заданием" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=16;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="542.5" y="477.0" width="239" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="end0" vertex="1" parent="system" value="Статус «Выкуплено»" style="rounded=1;arcSize=50;fillColor=#DDF3EB;strokeColor=#498974;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#19483C;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="19.0" y="564.0" width="226" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="end1" vertex="1" parent="system" value="Статус «Отменено»" style="rounded=1;arcSize=50;fillColor=#DDF3EB;strokeColor=#498974;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#19483C;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="284.0" y="564.0" width="226" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="end2" vertex="1" parent="system" value="Статус «Истекло»" style="rounded=1;arcSize=50;fillColor=#DDF3EB;strokeColor=#498974;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#19483C;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="549.0" y="564.0" width="226" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" edge="1" parent="1" source="start" target="input" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" edge="1" parent="1" source="input" target="validate" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" edge="1" parent="1" source="validate" target="check" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="check" target="fail" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="route4" vertex="1" parent="1" value="Нет" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=14;fontColor=#435C6B;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="838" y="378" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="check" target="book" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="route5" vertex="1" parent="1" value="Да" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=14;fontColor=#435C6B;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="711" y="441" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" edge="1" parent="1" source="book" target="choice" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" edge="1" parent="1" source="choice" target="branch0" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0;exitY=0.5;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="572" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="route7" vertex="1" parent="1" value="Выкуп до срока" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=14;fontColor=#435C6B;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="500" y="547" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" edge="1" parent="1" source="choice" target="branch1" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="route8" vertex="1" parent="1" value="Отмена кассиром" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=14;fontColor=#435C6B;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="762" y="612" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="edge9" edge="1" parent="1" source="choice" target="branch2" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=1;exitY=0.5;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1020" y="572" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="route9" vertex="1" parent="1" value="Срок истёк" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=14;fontColor=#435C6B;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="874" y="547" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="edge10" edge="1" parent="1" source="branch0" target="end0" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge11" edge="1" parent="1" source="branch1" target="end1" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge12" edge="1" parent="1" source="branch2" target="end2" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note" vertex="1" parent="1" value="При создании брони меняется доступное количество. Складской остаток уменьшается при выкупе." style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="783" width="1116" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="footer-line" vertex="1" parent="1" value="" style="strokeColor=none;fillColor=#C8D7DB;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="42" y="812" width="1116" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-icon0" vertex="1" parent="1" value="" style="rounded=1;arcSize=50;strokeColor=#6F919D;fillColor=#ECF3F5;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="42" y="824" width="25" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-label0" vertex="1" parent="1" value="Начало / результат" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=13;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="77" y="821" width="145" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-icon1" vertex="1" parent="1" value="" style="rounded=1;arcSize=50;strokeColor=#6D8C98;fillColor=#FFFFFF;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="237" y="824" width="20" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-label1" vertex="1" parent="1" value="Действие" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=13;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="267" y="821" width="145" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-icon2" vertex="1" parent="1" value="" style="rhombus;strokeColor=#47798A;fillColor=#E5F0F4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="358" y="824" width="22" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-label2" vertex="1" parent="1" value="Условие" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=13;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="390" y="821" width="145" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="page" vertex="1" parent="1" value="3 / 5" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=13;fontColor=#435C6B;fontStyle=0;align=right;verticalAlign=middle;">
+          <mxGeometry x="1058" y="821" width="100" height="18" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="p4" name="Оформление билета">
+    <mxGraphModel grid="0" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="848" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="project" vertex="1" parent="1" value="1С:Предприятие 8.3  /  Кинотеатр 1.2.2" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=16;fontColor=#435C6B;fontStyle=1;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="29" width="650" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="topic" vertex="1" parent="1" value="Бизнес-процессы" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=16;fontColor=#435C6B;fontStyle=0;align=right;verticalAlign=middle;">
+          <mxGeometry x="940" y="29" width="218" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="title" vertex="1" parent="1" value="Оформление билета" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=37;fontColor=#142835;fontStyle=1;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="59" width="1116" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="intro" vertex="1" parent="1" value="Одна операция в кассе относится к одному месту на выбранном сеансе." style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=19;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="111" width="1116" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" vertex="1" parent="1" value="Кассир" style="swimlane;startSize=43;horizontal=1;rounded=0;spacingLeft=20;strokeColor=#C8D7DB;fillColor=#E8EFF2;swimlaneFillColor=#F8FAFB;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=1;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="160" width="316" height="616" as="geometry" />
+        </mxCell>
+        <mxCell id="system" vertex="1" parent="1" value="Учётная система 1С" style="swimlane;startSize=43;horizontal=1;rounded=0;spacingLeft=20;strokeColor=#C8D7DB;fillColor=#DFEEF0;swimlaneFillColor=#F1F7F8;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=1;align=left;verticalAlign=middle;">
+          <mxGeometry x="358" y="160" width="800" height="616" as="geometry" />
+        </mxCell>
+        <mxCell id="start" vertex="1" parent="actor" value="Запрос на билет" style="rounded=1;arcSize=50;fillColor=#ECF3F5;strokeColor=#6F919D;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#234552;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="56.0" y="54.0" width="204" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="input" vertex="1" parent="actor" value="Выбрать сеанс, место&lt;br&gt;и операцию" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="31.0" y="111.0" width="254" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="validate" vertex="1" parent="system" value="Проверить сеанс, зал&lt;br&gt;и доступность места" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="230.0" y="111.0" width="334" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="check" vertex="1" parent="system" value="Операция&lt;br&gt;допустима?" style="rhombus;fillColor=#E5F0F4;strokeColor=#47798A;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=16;fontColor=#142835;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="285.0" y="210.0" width="224" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="fail" vertex="1" parent="system" value="Оформление отклонено" style="rounded=1;arcSize=50;fillColor=#FCEFEA;strokeColor=#B16550;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#803C29;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="575.0" y="234.0" width="214" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="choice" vertex="1" parent="system" value="Что оформляет&lt;br&gt;кассир?" style="rhombus;fillColor=#E5F0F4;strokeColor=#47798A;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=16;fontColor=#142835;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="286.0" y="342.0" width="222" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="branch0" vertex="1" parent="system" value="Провести «Продажу билета»&lt;br&gt;на свободное место" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=16;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="12.5" y="477.0" width="239" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="branch1" vertex="1" parent="system" value="Провести «Бронирование&lt;br&gt;билета» на свободное место" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=16;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="277.5" y="477.0" width="239" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="branch2" vertex="1" parent="system" value="Провести «Продажу билета»&lt;br&gt;по действующей брони" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=16;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="542.5" y="477.0" width="239" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="end0" vertex="1" parent="system" value="Место продано" style="rounded=1;arcSize=50;fillColor=#DDF3EB;strokeColor=#498974;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#19483C;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="19.0" y="564.0" width="226" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="end1" vertex="1" parent="system" value="Место забронировано" style="rounded=1;arcSize=50;fillColor=#DDF3EB;strokeColor=#498974;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#19483C;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="284.0" y="564.0" width="226" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="end2" vertex="1" parent="system" value="Место продано" style="rounded=1;arcSize=50;fillColor=#DDF3EB;strokeColor=#498974;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#19483C;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="549.0" y="564.0" width="226" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" edge="1" parent="1" source="start" target="input" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" edge="1" parent="1" source="input" target="validate" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" edge="1" parent="1" source="validate" target="check" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="check" target="fail" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="route4" vertex="1" parent="1" value="Нет" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=14;fontColor=#435C6B;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="835" y="393" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="check" target="choice" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="route5" vertex="1" parent="1" value="Да" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=14;fontColor=#435C6B;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="712" y="468" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" edge="1" parent="1" source="choice" target="branch0" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0;exitY=0.5;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="545" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="route6" vertex="1" parent="1" value="Покупка" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=14;fontColor=#435C6B;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="500" y="520" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" edge="1" parent="1" source="choice" target="branch1" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="route7" vertex="1" parent="1" value="Бронь" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=14;fontColor=#435C6B;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="762" y="612" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" edge="1" parent="1" source="choice" target="branch2" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=1;exitY=0.5;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1020" y="545" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="route8" vertex="1" parent="1" value="Выкуп" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=14;fontColor=#435C6B;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="874" y="520" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="edge9" edge="1" parent="1" source="branch0" target="end0" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge10" edge="1" parent="1" source="branch1" target="end1" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge11" edge="1" parent="1" source="branch2" target="end2" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note" vertex="1" parent="1" value="Бронь места действует до 15 минут и заканчивается к началу сеанса, если он наступает раньше." style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="783" width="1116" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="footer-line" vertex="1" parent="1" value="" style="strokeColor=none;fillColor=#C8D7DB;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="42" y="812" width="1116" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-icon0" vertex="1" parent="1" value="" style="rounded=1;arcSize=50;strokeColor=#6F919D;fillColor=#ECF3F5;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="42" y="824" width="25" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-label0" vertex="1" parent="1" value="Начало / результат" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=13;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="77" y="821" width="145" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-icon1" vertex="1" parent="1" value="" style="rounded=1;arcSize=50;strokeColor=#6D8C98;fillColor=#FFFFFF;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="237" y="824" width="20" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-label1" vertex="1" parent="1" value="Действие" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=13;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="267" y="821" width="145" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-icon2" vertex="1" parent="1" value="" style="rhombus;strokeColor=#47798A;fillColor=#E5F0F4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="358" y="824" width="22" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-label2" vertex="1" parent="1" value="Условие" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=13;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="390" y="821" width="145" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="page" vertex="1" parent="1" value="4 / 5" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=13;fontColor=#435C6B;fontStyle=0;align=right;verticalAlign=middle;">
+          <mxGeometry x="1058" y="821" width="100" height="18" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="p5" name="Возврат билета">
+    <mxGraphModel grid="0" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="848" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="project" vertex="1" parent="1" value="1С:Предприятие 8.3  /  Кинотеатр 1.2.2" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=16;fontColor=#435C6B;fontStyle=1;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="29" width="650" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="topic" vertex="1" parent="1" value="Бизнес-процессы" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=16;fontColor=#435C6B;fontStyle=0;align=right;verticalAlign=middle;">
+          <mxGeometry x="940" y="29" width="218" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="title" vertex="1" parent="1" value="Возврат билета" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=37;fontColor=#142835;fontStyle=1;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="59" width="1116" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="intro" vertex="1" parent="1" value="Возврат оформляется по исходному документу продажи." style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=19;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="111" width="1116" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" vertex="1" parent="1" value="Оператор 1С" style="swimlane;startSize=43;horizontal=1;rounded=0;spacingLeft=20;strokeColor=#C8D7DB;fillColor=#E8EFF2;swimlaneFillColor=#F8FAFB;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=1;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="160" width="316" height="616" as="geometry" />
+        </mxCell>
+        <mxCell id="system" vertex="1" parent="1" value="Учётная система 1С" style="swimlane;startSize=43;horizontal=1;rounded=0;spacingLeft=20;strokeColor=#C8D7DB;fillColor=#DFEEF0;swimlaneFillColor=#F1F7F8;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=1;align=left;verticalAlign=middle;">
+          <mxGeometry x="358" y="160" width="800" height="616" as="geometry" />
+        </mxCell>
+        <mxCell id="start" vertex="1" parent="actor" value="Запрос на возврат" style="rounded=1;arcSize=50;fillColor=#ECF3F5;strokeColor=#6F919D;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#234552;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="56.0" y="58.0" width="204" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="select" vertex="1" parent="actor" value="Создать «Возврат билета»,&lt;br&gt;указать продажу и провести" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="31.0" y="120.0" width="254" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="prepare" vertex="1" parent="system" value="Проверить, проведена ли&lt;br&gt;выбранная продажа" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="135.0" y="120.0" width="314" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="validate" vertex="1" parent="system" value="Проверить время начала сеанса&lt;br&gt;и наличие проведённого возврата" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="135.0" y="219.0" width="314" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="check" vertex="1" parent="system" value="Возврат&lt;br&gt;допустим?" style="rhombus;fillColor=#E5F0F4;strokeColor=#47798A;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=16;fontColor=#142835;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="185.0" y="316.0" width="214" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="success" vertex="1" parent="system" value="Провести «Возврат билета»&lt;br&gt;и записать статус «Возвращено»" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="135.0" y="438.0" width="314" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="done" vertex="1" parent="system" value="Место снова свободно" style="rounded=1;arcSize=50;fillColor=#DDF3EB;strokeColor=#498974;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#19483C;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="174.0" y="547.0" width="236" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="error" vertex="1" parent="system" value="Сообщить причину&lt;br&gt;отказа" style="rounded=1;arcSize=12;fillColor=#FFFFFF;strokeColor=#6D8C98;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="548.0" y="330.0" width="208" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="rejected" vertex="1" parent="system" value="Возврат не проведён" style="rounded=1;arcSize=50;fillColor=#FCEFEA;strokeColor=#B16550;strokeWidth=1.4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#803C29;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="534.0" y="453.0" width="236" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" edge="1" parent="1" source="start" target="select" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" edge="1" parent="1" source="select" target="prepare" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" edge="1" parent="1" source="prepare" target="validate" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="validate" target="check" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="check" target="success" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="route5" vertex="1" parent="1" value="Да" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=14;fontColor=#435C6B;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="604" y="575" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" edge="1" parent="1" source="check" target="error" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="route6" vertex="1" parent="1" value="Нет" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=14;fontColor=#435C6B;fontStyle=1;align=center;verticalAlign=middle;">
+          <mxGeometry x="751" y="498" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" edge="1" parent="1" source="success" target="done" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" edge="1" parent="1" source="error" target="rejected" style="noEdgeStyle=1;rounded=0;endArrow=block;endFill=1;strokeColor=#456371;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note" vertex="1" parent="1" value="После возврата место снова доступно на схеме зала. Цена в записи берётся из продажи." style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=15;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="42" y="783" width="1116" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="footer-line" vertex="1" parent="1" value="" style="strokeColor=none;fillColor=#C8D7DB;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="42" y="812" width="1116" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-icon0" vertex="1" parent="1" value="" style="rounded=1;arcSize=50;strokeColor=#6F919D;fillColor=#ECF3F5;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="42" y="824" width="25" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-label0" vertex="1" parent="1" value="Начало / результат" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=13;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="77" y="821" width="145" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-icon1" vertex="1" parent="1" value="" style="rounded=1;arcSize=50;strokeColor=#6D8C98;fillColor=#FFFFFF;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="237" y="824" width="20" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-label1" vertex="1" parent="1" value="Действие" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=13;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="267" y="821" width="145" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-icon2" vertex="1" parent="1" value="" style="rhombus;strokeColor=#47798A;fillColor=#E5F0F4;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=17;fontColor=#142835;fontStyle=0;align=center;verticalAlign=middle;">
+          <mxGeometry x="358" y="824" width="22" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-label2" vertex="1" parent="1" value="Условие" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=13;fontColor=#435C6B;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="390" y="821" width="145" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="page" vertex="1" parent="1" value="5 / 5" style="text;strokeColor=none;fillColor=none;spacing=0;html=1;whiteSpace=wrap;fontFamily=Segoe UI;fontSize=13;fontColor=#435C6B;fontStyle=0;align=right;verticalAlign=middle;">
+          <mxGeometry x="1058" y="821" width="100" height="18" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
